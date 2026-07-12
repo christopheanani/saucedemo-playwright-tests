@@ -58,6 +58,43 @@ saucedemo-playwright/
 
 ---
 
+                 Test Scenarios
+                       |
+                       ↓
+              Page Object Model
+                       |
+        ┌──────────────┼──────────────┐
+        ↓              ↓              ↓
+   HomePage       ProductPage     CartPage
+        ↓              ↓              ↓
+             Playwright Locators
+                       |
+                       ↓
+             Browser Automation
+                       |
+                       ↓
+              Test Results Report
+
+---
+
+flowchart TD
+    A[Test Scenarios] --> B[Page Object Model]
+
+    B --> C[HomePage]
+    B --> D[ProductPage]
+    B --> E[CartPage]
+    B --> F[CheckoutPage]
+    B --> G[LoginPage]
+
+    C --> H[Playwright Locators]
+    D --> H
+    E --> H
+    F --> H
+    G --> H
+
+    H --> I[Browser Automation]
+    I --> J[Test Results]
+
 ## Automated Test Scenarios
 
 ### Cart
